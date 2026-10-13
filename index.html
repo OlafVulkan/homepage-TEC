@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Bauüberwachung, Projektleitung, Zertifizierungsberatung nach GW 301 und GW 302 sowie Inhouse-Schulungen nach DVGW GW 129 (A) – TEC Thesing Engineering &amp; Consulting, Hamburg.">
 <title>TEC – Thesing Engineering &amp; Consulting</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230071C1%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -150,9 +151,83 @@
   .impressum p{color:var(--steel); margin:0 0 12px;}
   .impressum a{color:var(--blue);}
 
+
+  /* ---- promo bar ---- */
+  .promo-bar{background:var(--blue-deep); color:#fff; font-size:.9rem;}
+  .promo-bar .wrap{display:flex; justify-content:center; align-items:center; gap:6px 16px; flex-wrap:wrap; padding-top:9px; padding-bottom:9px; text-align:center;}
+  .promo-bar a{color:#fff; font-weight:600; text-decoration:underline; text-underline-offset:3px;}
+
+  /* ---- featured service card ---- */
+  .service.featured{background:var(--white); box-shadow:inset 4px 0 0 var(--blue);}
+  .service a.more{display:inline-block; margin-top:14px; color:var(--blue); font-weight:600; font-size:.95rem; text-decoration:none; border-bottom:1px solid var(--blue);}
+  .service a.more:hover{color:var(--blue-deep); border-color:var(--blue-deep);}
+  .about-text a{color:var(--blue);}
+
+  /* ---- training GW 129 ---- */
+  .training{background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .training-top{display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:start;}
+  @media(max-width:900px){.training-top{grid-template-columns:1fr; gap:32px;}}
+  .training h2{font-size:clamp(2rem,3.6vw,2.9rem); max-width:19ch;}
+  .training .lead{color:var(--steel); font-size:1.06rem; margin:18px 0 0; max-width:58ch;}
+  .benefits{list-style:none; margin:28px 0 0; padding:0;}
+  .benefits li{padding:14px 0 14px 18px; border-top:1px solid var(--line); border-left:3px solid var(--blue); margin-bottom:-1px; color:var(--steel); font-size:.98rem;}
+  .benefits li + li{margin-top:14px; border-top:none;}
+  .benefits strong{display:block; color:var(--ink); font-size:1.02rem; margin-bottom:2px;}
+
+  .facts{border:1px solid var(--line); border-top:4px solid var(--blue); background:var(--paper); padding:24px;}
+  .facts h3{font-size:1.5rem;}
+  .facts dl{margin:14px 0 0; border-top:1px solid var(--line);}
+  .facts .row{display:grid; grid-template-columns:7.2rem 1fr; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); font-size:.93rem;}
+  .facts dt{color:var(--steel-light);}
+  .facts dd{margin:0; color:var(--ink);}
+  .facts dd small{display:block; color:var(--steel-light); font-size:.82rem; margin-top:2px;}
+  .facts .btn{display:block; text-align:center; margin-top:20px;}
+  .facts .alt{display:block; text-align:center; margin-top:12px; font-size:.93rem; color:var(--steel);}
+  .facts .alt a{color:var(--blue); font-weight:600;}
+
+  .training-sub{display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; margin:60px 0 18px;}
+  .training-sub h3{font-size:1.7rem;}
+  .training-sub .mono{color:var(--steel-light);}
+  .agenda{list-style:none; margin:0; padding:0; border:1px solid var(--line);}
+  .agenda li{position:relative; display:grid; grid-template-columns:1fr auto; gap:4px 24px; padding:16px 20px 19px; border-bottom:1px solid var(--line); background:var(--paper);}
+  .agenda li:last-child{border-bottom:none;}
+  .agenda li::after{content:""; position:absolute; left:0; bottom:0; height:3px; width:var(--w,10%); background:var(--blue);}
+  .agenda b{font-weight:600;}
+  .agenda p{margin:2px 0 0; color:var(--steel); font-size:.93rem; max-width:70ch;}
+  .agenda .ue{font-family:'IBM Plex Mono',monospace; font-size:.85rem; color:var(--blue); white-space:nowrap; align-self:start; padding-top:2px;}
+  @media(max-width:560px){.agenda li{grid-template-columns:1fr;} .agenda .ue{order:-1;}}
+
+  .audience{display:flex; flex-wrap:wrap; gap:10px; margin:0; padding:0; list-style:none;}
+  .audience li{border:1px solid var(--line); background:var(--paper); padding:8px 14px; font-size:.92rem; color:var(--steel);}
+  .training-note{margin:18px 0 0; color:var(--steel-light); font-size:.85rem; max-width:78ch;}
+  .training-note a{color:var(--blue);}
+
+  .training-cta{margin-top:56px; background:var(--blue-deep); color:#fff; padding:34px 32px; display:flex; justify-content:space-between; align-items:center; gap:24px 40px; flex-wrap:wrap;}
+  .training-cta h3{font-size:clamp(1.6rem,2.6vw,2.1rem); max-width:24ch;}
+  .training-cta p{margin:8px 0 0; color:rgba(255,255,255,.85); max-width:54ch;}
+  .training-cta .btns{display:flex; gap:12px; flex-wrap:wrap;}
+  .btn-light{background:#fff; color:var(--blue-deep);}
+  .btn-light:hover{background:#E3ECF3;}
+  .btn-outline-light{border-color:rgba(255,255,255,.7); color:#fff;}
+  .btn-outline-light:hover{background:rgba(255,255,255,.14);}
+  @media(max-width:640px){.training-cta{padding:26px 20px;}}
+
+  /* ---- impressum extended ---- */
+  .impressum h2.sub{margin-top:56px; padding-top:34px; border-top:1px solid var(--line);}
+  .impressum .stand{margin-top:28px; font-size:.85rem; color:var(--steel-light);}
+  .footer-links a{text-decoration:none; border-bottom:1px solid var(--line);}
+  .footer-links a:hover{color:var(--ink); border-color:var(--blue);}
+
 </style>
 </head>
 <body>
+
+<div class="promo-bar">
+  <div class="wrap">
+    <span>Schulung nach DVGW GW&nbsp;129 (A): ein Tag, direkt in Ihrem Betrieb.</span>
+    <a href="#gw129">Details und Anfrage</a>
+  </div>
+</div>
 
 <header>
   <div class="wrap header-inner">
@@ -160,6 +235,7 @@
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">Menü</button>
     <nav id="mainNav">
       <a href="#leistungen">Leistungen</a>
+      <a href="#gw129">Schulung GW&nbsp;129</a>
       <a href="#qualifikation">Qualifikation</a>
       <a href="#ueber">Über mich</a>
       <a href="#kontakt" class="nav-cta">Kontakt</a>
@@ -174,7 +250,7 @@
       <p class="lead">Unabhängige Ingenieurleistungen für erdverlegte Rohrsysteme – von der Bauüberwachung über die Zertifizierung nach GW&nbsp;301 und GW&nbsp;302 bis zur SiGeKo-Koordination auf der Baustelle.</p>
       <div class="hero-ctas">
         <a href="#kontakt" class="btn btn-primary">Anfrage stellen</a>
-        <a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a>
+        <a href="#gw129" class="btn btn-ghost">Schulung GW&nbsp;129</a>
       </div>
     </div>
     <div>
@@ -218,6 +294,78 @@
   </div>
 </div>
 
+<section class="training" id="gw129">
+  <div class="wrap">
+    <div class="training-top">
+      <div>
+        <div class="section-head" style="border:none; padding:0; margin-bottom:18px;">
+          <span class="mono">SCHULUNG · GW 129 (A)</span>
+        </div>
+        <h2>Leitungsschäden vermeiden: GW&nbsp;129 direkt in Ihrem Betrieb</h2>
+        <p class="lead">Maschinengestützte Arbeiten in der Nähe von Netzanlagen gefährden Menschen, Umwelt und Versorgung. Das Arbeitsblatt DVGW GW&nbsp;129 (A) sieht vor, dass dafür nur Aufsichtspersonen und Ausführende eingesetzt werden, die regelmäßig geschult und geprüft sind. Ich schule Ihr Team an einem Tag, bei Ihnen vor Ort.</p>
+        <ul class="benefits">
+          <li><strong>Praxis statt Theorie</strong>Typische Schadensfälle und Verhaltensfehler stehen im Mittelpunkt, jeweils dem richtigen Vorgehen gegenübergestellt.</li>
+          <li><strong>Alle Sparten in einer Schulung</strong>Strom, Telekommunikation, Gas, Trinkwasser, Abwasser und Fernwärme, jeweils mit ihren besonderen Gefahren.</li>
+          <li><strong>Vom Fachmann für den Rohrbau</strong>Langjährige Erfahrung im erdverlegten Rohrbau, Auditor nach GW&nbsp;301 und GW&nbsp;302 sowie SiGeKo.</li>
+          <li><strong>Direkt bei Ihnen</strong>Ihr Team, Ihr Ort, Termin nach Absprache. Gruppen bis zu 40 Personen.</li>
+        </ul>
+      </div>
+
+      <aside class="facts" aria-label="Schulung im Überblick">
+        <span class="mono" style="color:var(--blue)">IM ÜBERBLICK</span>
+        <h3 style="margin-top:6px;">Inhouse-Schulung GW&nbsp;129 (A)</h3>
+        <dl>
+          <div class="row"><dt>Regelwerk</dt><dd>DVGW GW&nbsp;129 (A), Januar 2023<small>zugleich AGFW FW&nbsp;606, DWA-M&nbsp;129 und VDE-AR-N&nbsp;4224</small></dd></div>
+          <div class="row"><dt>Dauer</dt><dd>1 Tag: 7&nbsp;UE Schulung plus 1&nbsp;UE Prüfung<small>1 UE = 45 Minuten</small></dd></div>
+          <div class="row"><dt>Ort</dt><dd>Bei Ihnen im Betrieb</dd></div>
+          <div class="row"><dt>Gruppe</dt><dd>Bis zu 40 Teilnehmende</dd></div>
+          <div class="row"><dt>Prüfung</dt><dd>20 Fragen zum Ankreuzen</dd></div>
+          <div class="row"><dt>Nachweis</dt><dd>Bescheinigung bei bestandener Prüfung</dd></div>
+        </dl>
+        <a class="btn btn-primary" href="mailto:info@othesing.de?subject=Anfrage%20Inhouse-Schulung%20GW%20129%20(A)&amp;body=Guten%20Tag%20Herr%20Thesing%2C%0D%0A%0D%0Awir%20interessieren%20uns%20f%C3%BCr%20eine%20Inhouse-Schulung%20nach%20GW%20129%20(A).%0D%0A%0D%0AFirma%3A%0D%0AAnzahl%20Teilnehmende%3A%0D%0AWunschzeitraum%3A%0D%0AOrt%3A%0D%0A%0D%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">Schulung anfragen</a>
+        <span class="alt">oder anrufen: <a href="tel:+491721977631">0172 1977631</a></span>
+      </aside>
+    </div>
+
+    <div class="training-sub">
+      <h3>Ablauf an einem Tag</h3>
+      <span class="mono">Balken = Anteil an der Schulungszeit</span>
+    </div>
+    <ol class="agenda">
+      <li style="--w:8%"><div><b>Schadensursachen</b><p>Unsachgemäße Freilegung, Verwechslung von Leitungen, falsches Verhalten bei Beschädigungen.</p></div><span class="ue">0,25 UE</span></li>
+      <li style="--w:8%"><div><b>Auswirkungen</b><p>Folgen für Personen, Umwelt, Gebäude und die Versorgungssicherheit.</p></div><span class="ue">0,25 UE</span></li>
+      <li style="--w:17%"><div><b>Rechtliche Grundsätze</b><p>Sorgfaltspflichten und Verantwortung, Haftung bei Schäden, strafrechtliche Konsequenzen.</p></div><span class="ue">0,5 UE</span></li>
+      <li style="--w:100%"><div><b>Netzanlagen</b><p>Aufbau, Werkstoffe und besondere Gefahren von Strom, Telekommunikation, Gas, Trinkwasser, Abwasser sowie Nah- und Fernwärme.</p></div><span class="ue">3,0 UE</span></li>
+      <li style="--w:33%"><div><b>Richtiger Umgang mit Netzanlagen</b><p>Planauskunft, Ortung, Suchschlitze, Mindestabstände, Verhalten bei Berührung oder Beschädigung, Notruf und Eigensicherung.</p></div><span class="ue">1,0 UE</span></li>
+      <li style="--w:67%"><div><b>Demonstration</b><p>Gefahrensituationen und Maßnahmen zur Abhilfe, zum Beispiel Gasaustritt in der Baugrube, anhand von Videos.</p></div><span class="ue">2,0 UE</span></li>
+      <li style="--w:33%"><div><b>Prüfung</b><p>20 Fragen zum Ankreuzen. Die Bescheinigung gibt es nur bei bestandener Prüfung.</p></div><span class="ue">1,0 UE</span></li>
+    </ol>
+
+    <div class="training-sub">
+      <h3>Für wen ist die Schulung?</h3>
+    </div>
+    <ul class="audience">
+      <li>Bagger- und Maschinenführer</li>
+      <li>Bauleiter, Poliere und Vorarbeiter</li>
+      <li>Arbeitsvorbereitung und Planer</li>
+      <li>Helfer, die Maschinenführern zur Hand gehen</li>
+      <li>Land- und Forstwirtschaft, Garten- und Landschaftsbau</li>
+    </ul>
+    <p class="training-note">Hinweis: Die Schulung vermittelt wesentliche, typische Aspekte ohne Anspruch auf Vollständigkeit. Gültigkeitsdauer und Wiederholung der Bescheinigung richten sich nach Abschnitt 13 des Arbeitsblattes. Siehe auch <a href="#haftung">Haftungsausschluss</a>.</p>
+
+    <div class="training-cta">
+      <div>
+        <h3>Ihr Team braucht die Qualifikation nach GW&nbsp;129 (A)?</h3>
+        <p>Schreiben Sie mir kurz Firma, Teilnehmerzahl und Wunschzeitraum. Ich melde mich mit einem Terminvorschlag.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-light" href="mailto:info@othesing.de?subject=Anfrage%20Inhouse-Schulung%20GW%20129%20(A)&amp;body=Guten%20Tag%20Herr%20Thesing%2C%0D%0A%0D%0Awir%20interessieren%20uns%20f%C3%BCr%20eine%20Inhouse-Schulung%20nach%20GW%20129%20(A).%0D%0A%0D%0AFirma%3A%0D%0AAnzahl%20Teilnehmende%3A%0D%0AWunschzeitraum%3A%0D%0AOrt%3A%0D%0A%0D%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">Anfrage per E-Mail</a>
+        <a class="btn btn-outline-light" href="tel:+491721977631">0172 1977631</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="leistungen">
   <div class="wrap">
     <div class="section-head">
@@ -240,10 +388,11 @@
         <h3>Sicherheits­koordination</h3>
         <p>Sicherheits- und Gesundheitsschutzkoordination auf Baustellen im Rohrleitungs- und Anlagenbau.</p>
       </div>
-      <div class="service">
-        <span class="mono">GW 129 · INHOUSE</span>
-        <h3>Schulungen</h3>
-        <p>Inhouse-Kurse zu GW&nbsp;129, zugeschnitten auf Ihr Team. Termine und Inhalte auf Anfrage.</p>
+      <div class="service featured">
+        <span class="mono">GW 129 · INHOUSE-SCHULUNG</span>
+        <h3>Schulung nach GW&nbsp;129 (A)</h3>
+        <p>Ein Tag, bis zu 40 Teilnehmende, Prüfung und Bescheinigung. Direkt bei Ihnen im Betrieb, Termine nach Absprache.</p>
+        <a class="more" href="#gw129">Zum Schulungsangebot</a>
       </div>
     </div>
   </div>
@@ -266,7 +415,7 @@
         <h2>Langjährige Erfahrung im Rohrleitungsbau</h2>
       </div>
       <p>Als Internationaler Schweißfachingenieur mit langjähriger Erfahrung begleite ich Projekte im erdverlegten Rohrbau, Pipelinebau und Anlagenbau – von der Bauüberwachung vor Ort bis zur Projektleitung.</p>
-      <p>Als Auditor für GW&nbsp;301 und GW&nbsp;302 unterstütze und berate ich Unternehmen bei der Zertifizierung nach den DVGW-Regelwerken. Als SiGeKo koordiniere ich Sicherheits- und Gesundheitsschutz auf der Baustelle. Ergänzend biete ich Inhouse-Schulungen zu GW&nbsp;129 an.</p>
+      <p>Als Auditor für GW&nbsp;301 und GW&nbsp;302 unterstütze und berate ich Unternehmen bei der Zertifizierung nach den DVGW-Regelwerken. Als SiGeKo koordiniere ich Sicherheits- und Gesundheitsschutz auf der Baustelle. Ergänzend schule ich Ihre Mitarbeitenden nach GW&nbsp;129 (A), direkt bei Ihnen im Betrieb (<a href="#gw129">Details zur Schulung</a>).</p>
     </div>
   </div>
 </section>
@@ -309,30 +458,63 @@
     <h3>Angaben gemäß § 5 DDG</h3>
     <p>
       TEC – Thesing Engineering &amp; Consulting<br>
-      Dipl.-Ing. Olaf Thesing<br>
+      Inhaber: Dipl.-Ing. Olaf Thesing<br>
       Gerichtstraße 3<br>
-      22765 Hamburg
+      22765 Hamburg<br>
+      Deutschland
     </p>
 
     <h3>Kontakt</h3>
     <p>
-      Telefon: <a href="tel:+491721977631">0172 1977631</a><br>
+      Telefon (mobil): <a href="tel:+491721977631">0172 1977631</a><br>
       E-Mail: <a href="mailto:info@othesing.de">info@othesing.de</a>
     </p>
 
-    <h3>Verantwortlich für den Inhalt</h3>
+    <!-- Falls vorhanden, hier ergänzen:
+    <h3>Umsatzsteuer-ID</h3>
+    <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE…</p>
+    -->
+
+    <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
     <p>
       Dipl.-Ing. Olaf Thesing<br>
       Gerichtstraße 3<br>
       22765 Hamburg
     </p>
+
+    <h3>Verbraucherstreitbeilegung</h3>
+    <p>Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+    <h2 class="sub" id="haftung">Haftungsausschluss</h2>
+
+    <h3>Haftung für Inhalte</h3>
+    <p>Die Inhalte dieser Website habe ich mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach den §§ 8 bis 10 DDG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+    <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine Haftung ist erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Sobald mir entsprechende Rechtsverletzungen bekannt werden, entferne ich die betreffenden Inhalte umgehend.</p>
+
+    <h3>Haftung für Links</h3>
+    <p>Diese Website kann Links zu externen Websites Dritter enthalten, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte übernehme ich keine Gewähr. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Eine fortlaufende inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte für eine Rechtsverletzung nicht zumutbar. Werden mir Rechtsverletzungen bekannt, entferne ich derartige Links umgehend.</p>
+
+    <h3>Fachliche Informationen und Regelwerke</h3>
+    <p>Die Angaben auf dieser Website, insbesondere zu Regelwerken wie DVGW GW&nbsp;129 (A), GW&nbsp;301 und GW&nbsp;302, sind allgemeine Informationen zu meinem Leistungsangebot. Sie ersetzen weder die Lektüre der jeweils gültigen Regelwerke noch die fachliche, technische oder rechtliche Prüfung im Einzelfall. Maßgeblich ist stets die aktuelle Fassung des jeweiligen Regelwerks, die beim Herausgeber bezogen werden kann. Wer ein Regelwerk anwendet, bleibt für die richtige Anwendung im konkreten Fall selbst verantwortlich.</p>
+    <p>Für Schäden, die aus der Nutzung der auf dieser Website bereitgestellten Informationen entstehen, ist die Haftung ausgeschlossen, soweit nicht Vorsatz oder grobe Fahrlässigkeit vorliegt und soweit nicht Leben, Körper oder Gesundheit verletzt werden. Gesetzliche Haftungsregelungen, die sich nicht ausschließen lassen, bleiben unberührt.</p>
+
+    <h3>Schulungen und Beratungsleistungen</h3>
+    <p>Schulungen vermitteln wesentliche, typische Aspekte ohne Anspruch auf Vollständigkeit. Sie ersetzen weder die Unterweisung auf der Baustelle noch die Beachtung der Vorgaben des jeweiligen Netzbetreibers, des Auftraggebers und der geltenden Rechtsvorschriften. Für meine Leistungen gelten die jeweils individuell vereinbarten Vertragsbedingungen.</p>
+
+    <h3>Urheberrecht</h3>
+    <p>Die von mir erstellten Inhalte und Werke auf diesen Seiten, einschließlich der Schulungsunterlagen, unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen meiner schriftlichen Zustimmung. Soweit Inhalte nicht von mir erstellt wurden, beachte ich die Urheberrechte Dritter. Sollten Sie dennoch auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Werden mir Rechtsverletzungen bekannt, entferne ich derartige Inhalte umgehend.</p>
+
+    <h3>Bezeichnungen Dritter</h3>
+    <p>DVGW, AGFW, DWA, VDE und weitere genannte Bezeichnungen und Regelwerksnummern sind Kennzeichen beziehungsweise Bezeichnungen der jeweiligen Rechteinhaber. Sie werden hier ausschließlich zur Beschreibung meines Leistungsangebots genannt.</p>
+
+    <p class="stand">Stand: Oktober 2026</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap footer-inner">
     <span>© 2026 TEC – Thesing Engineering &amp; Consulting</span>
-    <span>Dipl.-Ing. Olaf Thesing · Hamburg · <a href="#impressum">Impressum</a></span>
+    <span class="footer-links">Dipl.-Ing. Olaf Thesing · Hamburg · <a href="#impressum">Impressum</a> · <a href="#haftung">Haftungsausschluss</a></span>
   </div>
 </footer>
 
